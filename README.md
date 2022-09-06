@@ -61,9 +61,8 @@ import * as Sentry from "@sentry/browser";
 // Node.js: import * as Sentry from "@sentry/node";
 import LoglevelSentryPlugin from "@toruslabs/loglevel-sentry";
 
-logger = loglevel.getLogger("__LOGGER_NAME__");
-
-const plugin = new LoglevelSentryPlugin(Sentry);
+const logger = loglevel.getLogger("__LOGGER_NAME__");
+const sentry = new LoglevelSentryPlugin(Sentry);
 sentry.install(logger);
 ```
 
